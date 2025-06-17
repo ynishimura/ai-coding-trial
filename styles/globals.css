@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Comic Sans MS", cursive, system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-pink-100 via-purple-50 to-indigo-100;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  button,
+  [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-pink-400 to-purple-500 text-white text-xl md:text-2xl font-bold py-4 px-8 rounded-3xl shadow-lg transform transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-gradient-to-r from-blue-400 to-cyan-500 text-white text-lg md:text-xl font-bold py-3 px-6 rounded-2xl shadow-lg transform transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-3xl shadow-xl p-6 transform transition-all duration-300;
+  }
+
+  .character-display {
+    @apply text-8xl md:text-9xl font-bold text-center select-none cursor-pointer transform transition-all duration-300 hover:scale-110;
+  }
+}
