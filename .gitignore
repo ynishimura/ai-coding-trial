@@ -1,17 +1,17 @@
 # Dependencies
-/node_modules
+**/node_modules
 /.pnp
 .pnp.js
 
 # Testing
-/coverage
+**/coverage
 
 # Next.js
-/.next/
-/out/
+**/.next/
+**/out/
 
 # Production
-/build
+**/build
 
 # Misc
 .DS_Store
@@ -30,7 +30,14 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
-next-env.d.ts
+**/next-env.d.ts
 
 # Vitest
-coverage/ 
+**/coverage/
+
+# IDE
+.vscode/
+.idea/
+
+# OS generated files
+Thumbs.db 

@@ -237,4 +237,3 @@ describe("TracingCanvas", () => {
       expect(mockContext.stroke).toHaveBeenCalled();
     }
   });
-});
