@@ -218,7 +218,7 @@ export default function QuizPage() {
             </h2>
 
             {/* 参考画像 */}
-            {(currentQuestion as any).imageUrl && (
+            {currentQuestion.imageUrl && (
               <motion.div
                 className="mb-6"
                 initial={{ opacity: 0, y: 20 }}
@@ -226,18 +226,16 @@ export default function QuizPage() {
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
                 <img
-                  src={(currentQuestion as any).imageUrl}
-                  alt={
-                    (currentQuestion as any).description || currentQuestion.char
-                  }
+                  src={currentQuestion.imageUrl}
+                  alt={currentQuestion.description || currentQuestion.char}
                   className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-2xl shadow-lg mx-auto mb-3"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
                   }}
                 />
-                {(currentQuestion as any).description && (
+                {currentQuestion.description && (
                   <div className="text-lg md:text-xl font-bold text-gray-600 mb-2">
-                    {(currentQuestion as any).description}
+                    {currentQuestion.description}
                   </div>
                 )}
               </motion.div>

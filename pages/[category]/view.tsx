@@ -109,19 +109,16 @@ export default function ViewPage() {
                   transition={{ delay: 0.2, duration: 0.5 }}
                 >
                   <img
-                    src={(currentCharacter as any).imageUrl}
-                    alt={
-                      (currentCharacter as any).description ||
-                      currentCharacter.char
-                    }
+                    src={currentCharacter.imageUrl}
+                    alt={currentCharacter.description || currentCharacter.char}
                     className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-2xl shadow-lg mx-auto mb-3"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}
                   />
-                  {(currentCharacter as any).description && (
+                  {currentCharacter.description && (
                     <div className="text-lg md:text-xl font-bold text-gray-600 mb-2">
-                      {(currentCharacter as any).description}
+                      {currentCharacter.description}
                     </div>
                   )}
                 </motion.div>
